@@ -66,6 +66,7 @@ extension AddNewsViewController: UIImagePickerControllerDelegate, UINavigationCo
         if
             mediaType == kUTTypeImage as String,
             let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            newImage.image = originalImage
             let imageData = UIImagePNGRepresentation(originalImage)!
             newsRouter.photoPostToWall(image: imageData) { [weak self] done in
                 if done {
