@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="iMessage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q8v-oQ-Ggz">
+                                <rect key="frame" x="0.0" y="20" width="320" height="508"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MessageFriendsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageFriendsCell" id="EOm-a7-IMg" customClass="MessageTableViewCell" customModule="iMessage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EOm-a7-IMg" id="uhk-sF-u7g">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S6x-9F-qmT">
+                                                    <rect key="frame" x="10" y="5" width="70" height="59.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="l9X-b1-dCu"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FriendName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCL-TU-VdP">
+                                                    <rect key="frame" x="100" y="24.5" width="190" height="20.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstItem="S6x-9F-qmT" firstAttribute="top" secondItem="uhk-sF-u7g" secondAttribute="top" constant="5" id="11Q-OL-KQz"/>
+                                                <constraint firstAttribute="bottom" secondItem="S6x-9F-qmT" secondAttribute="bottom" constant="5" id="9Qw-aS-5Ac"/>
+                                                <constraint firstItem="S6x-9F-qmT" firstAttribute="leading" secondItem="uhk-sF-u7g" secondAttribute="leading" constant="10" id="FxN-z2-1bd"/>
+                                                <constraint firstItem="TCL-TU-VdP" firstAttribute="centerY" secondItem="uhk-sF-u7g" secondAttribute="centerY" id="GMI-TQ-R6x"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TCL-TU-VdP" secondAttribute="trailing" constant="15" id="XWx-zb-6b4"/>
+                                                <constraint firstItem="TCL-TU-VdP" firstAttribute="leading" secondItem="S6x-9F-qmT" secondAttribute="trailing" constant="20" id="yYf-Bk-IRS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatar" destination="S6x-9F-qmT" id="9nK-Zn-Bmo"/>
+                                            <outlet property="friendName" destination="TCL-TU-VdP" id="DPr-t8-Mgm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q8v-oQ-Ggz" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="I9V-fY-6go"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="q8v-oQ-Ggz" secondAttribute="trailing" id="OYS-62-D5r"/>
+                            <constraint firstItem="q8v-oQ-Ggz" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" id="XAw-4M-pPV"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="q8v-oQ-Ggz" secondAttribute="bottom" id="tym-7p-3ty"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="tableView" destination="q8v-oQ-Ggz" id="vBd-DQ-Rw1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68.799999999999997" y="32.383808095952027"/>
+        </scene>
+    </scenes>
+</document>

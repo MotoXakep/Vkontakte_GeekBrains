@@ -1,0 +1,6 @@
+framework module Pods_Borisov_Aleksey {
+  umbrella header "Pods-Borisov_Aleksey-umbrella.h"
+
+  export *
+  module * { export * }
+}

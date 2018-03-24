@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Friends Table Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="FriendsTableController" customModule="WatchApp_Extension">
+                    <items>
+                        <table alignment="left" id="PuC-Q7-73E">
+                            <items>
+                                <tableRow identifier="friendRow" id="QuK-Mz-ooP" customClass="TableRow" customModule="WatchApp_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="TT1-XZ-YJH">
+                                        <items>
+                                            <imageView width="38" alignment="left" verticalAlignment="center" contentMode="scaleAspectFit" id="m6g-KS-prI"/>
+                                            <label width="88" height="35" alignment="left" verticalAlignment="center" numberOfLines="2" id="xD7-Ru-ykd">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="avatar" destination="m6g-KS-prI" id="7Au-r8-SO0"/>
+                                        <outlet property="name" destination="xD7-Ru-ykd" id="Djg-KX-8dM"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="PuC-Q7-73E" id="m9n-nh-hPF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>
